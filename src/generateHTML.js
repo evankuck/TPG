@@ -10,7 +10,7 @@ const generateManager = function (manager) {
             <div class="card-body">
                 <p class="id">ID: ${manager.id}</p>
                 <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                <p class="office">Office Number: ${manager.officeNumber}</p>
+                <p class="office">Office Number: ${manager.office}</p>
             </div>
         </div>
     </div>
@@ -56,10 +56,10 @@ const generateIntern = function (intern) {
 };
 
 // push array to page 
-generateHTML = (data) => {
+const generateHTML = (data) => {
 
     // array for cards 
-    pageArray = []; 
+    const pageArray = []; 
 
     for (let i = 0; i < data.length; i++) {
         const employee = data[i];
@@ -137,4 +137,4 @@ const generateTeamPage = function (employeeCards) {
 }
 
 // export to index
-module.exports = generateHTML; 
+export default generateHTML; 
